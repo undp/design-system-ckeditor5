@@ -4,7 +4,29 @@
 @import 'assets/scss/variables';
 @import 'assets/scss/breakpoints';
 // @import 'assets/scss/mixins';
-.ck-content {
+
+@import 'settings';
+@import 'fonts';
+
+.ck.ck-content {
+
+  /* this has to be inlined as they were assigned on html or body elements */
+  -webkit-tap-highlight-color: transparent;
+  color: $color-black;
+  font-family: $Font-Family-ProximaNova;
+  font-size: 1rem;
+  line-height: 1.4;
+  @include devicebreak(medium) {
+    font-size: 1.25rem;
+  }
+  :lang(my) {
+    font-family: $Font-Family-NotoSans;
+    line-height: 1.7;
+  }
+  :lang(bn) {
+    font-family: $Font-Family-UNBangla;
+  }
+
 @import 'assets/scss/typography';
 
 // @import 'assets/scss/grid';

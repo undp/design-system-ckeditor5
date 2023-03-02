@@ -53,9 +53,11 @@ function sassBuild() {
     autoprefixer(),
     // externalize icon links in imported stylesheets
     url({
-      filter: '**/icons/*.svg',
+      filter: (arr) => {
+        return arr.url.endsWith('.svg');
+      },
       url: (asset) => {
-        return CDN + '/images/' + asset.url.split('/').at(-1);
+        return CDN + 'images/' + asset.url.split('/').at(-1);
       },
     }),
     // UnCSS - Uncomment to remove unused styles in production
