@@ -14,7 +14,7 @@ const PATH_DIST = 'dist';
 const PATH_PUBLISH = 'docs';
 const PATH_ASSETS = ['src/**/*', '!src/{img,js,scss}/**/*'];
 const PATH_SASS = ['node_modules/@undp/design-system/stories'];
-const CDN = 'https://undp.github.io/design-system/';
+const CDN = 'https://cdn.jsdelivr.net/npm/@undp/design-system@1/docs/';
 
 // Check for --production flag
 const PRODUCTION = !!(yargs.argv.production);
